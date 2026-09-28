@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Мебель на заказ</title>
+  <meta name="description" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="config/company.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">К содержимому</a>
+
+  <header class="header" id="top">
+    <div class="wrap header__row">
+      <a class="logo" href="#top" data-slot="logo"></a>
+      <nav class="nav" aria-label="Разделы">
+        <a href="#services">Услуги</a>
+        <a href="#doctors">Работы</a>
+        <a href="#prices">Цены</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <a class="header__phone" data-slot="phone-link"></a>
+        <a class="btn btn--accent btn--sm" href="#booking">Замер бесплатно</a>
+        <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav class="wrap">
+        <a href="#services">Услуги</a>
+        <a href="#doctors">Работы</a>
+        <a href="#prices">Цены</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contacts">Контакты</a>
+        <a class="mobile-menu__phone" data-slot="phone-link"></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="rating" data-slot="rating"></p>
+          <h1 class="hero__title" data-slot="hero-title"></h1>
+          <p class="hero__lead" data-slot="hero-subtitle"></p>
+          <div class="hero__cta">
+            <a class="btn btn--accent" href="#booking">Записаться на замер</a>
+            <a class="btn btn--wa" data-slot="wa-link" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Написать в WhatsApp
+            </a>
+          </div>
+          <dl class="facts" data-slot="facts"></dl>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__photo" data-slot="hero-photo"></div>
+          <!-- Виджет быстрой записи -->
+          <form class="slotcard" id="slotcard" aria-label="Быстрая запись">
+            <p class="slotcard__title">Ближайшие даты замера</p>
+            <label class="field field--compact">
+              <span>Услуга</span>
+              <select name="service" data-slot="service-options"></select>
+            </label>
+            <div class="days" role="radiogroup" aria-label="День" data-slot="days"></div>
+            <div class="times" role="radiogroup" aria-label="Время" data-slot="times"></div>
+            <button class="btn btn--accent btn--block" type="submit" data-slot="slot-submit">Выберите время</button>
+            <p class="slotcard__note">Замерщик подтвердит время в WhatsApp</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Что мы делаем</h2>
+          <p>Делаем корпусную мебель под вашу планировку. Цены указаны «от» — точную сумму называем после бесплатного замера.</p>
+        </div>
+        <ul class="services" data-slot="services"></ul>
+      </div>
+    </section>
+
+    <!-- ADVANTAGES + STEPS -->
+    <section class="section section--brand" id="why">
+      <div class="wrap why">
+        <div class="why__intro">
+          <h2>Почему у нас заказывают и советуют знакомым</h2>
+          <ul class="advantages" data-slot="advantages"></ul>
+        </div>
+        <div class="why__steps">
+          <h3>Как проходит первый визит</h3>
+          <ol class="steps" data-slot="steps"></ol>
+          <a class="btn btn--accent" href="#booking">Вызвать замерщика</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <section class="section" id="doctors">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Наши работы</h2>
+          <p>Фото с объектов клиентов: материалы, сроки и итоговая стоимость каждого заказа.</p>
+        </div>
+        <ul class="doctors" data-slot="doctors"></ul>
+      </div>
+    </section>
+
+    <!-- PRICES -->
+    <section class="section section--soft" id="prices">
+      <div class="wrap prices">
+        <div class="prices__side">
+          <h2>Цены</h2>
+          <p>Ориентировочные цены. Точная смета с материалами и фурнитурой — после замера, бесплатно.</p>
+          <div class="tabs" role="tablist" aria-label="Категории цен" data-slot="price-tabs"></div>
+        </div>
+        <div class="prices__table" data-slot="price-panels"></div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="wrap">
+        <div class="section__head section__head--row">
+          <h2>Отзывы клиентов</h2>
+          <p class="rating rating--big" data-slot="rating"></p>
+        </div>
+        <ul class="reviews" data-slot="reviews"></ul>
+      </div>
+    </section>
+
+    <!-- LICENSES -->
+    <section class="section section--tight" id="licenses">
+      <div class="wrap licenses">
+        <h2>Гарантия и материалы</h2>
+        <ul class="licenses__list" data-slot="licenses"></ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--soft" id="faq">
+      <div class="wrap faq">
+        <h2>Частые вопросы</h2>
+        <div class="faq__list" data-slot="faq"></div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="section" id="booking">
+      <div class="wrap booking">
+        <div class="booking__copy">
+          <h2>Бесплатный замер</h2>
+          <p>Оставьте имя и телефон — администратор свяжется с вами в течение 15 минут в рабочее время и подберёт удобное время.</p>
+          <ul class="booking__alt">
+            <li><a data-slot="phone-link"></a></li>
+            <li><a data-slot="wa-link" target="_blank" rel="noopener">Написать в WhatsApp</a></li>
+          </ul>
+        </div>
+        <form class="form" id="booking-form" novalidate>
+          <label class="field">
+            <span>Ваше имя</span>
+            <input name="name" autocomplete="name" required placeholder="Как к вам обращаться">
+          </label>
+          <label class="field">
+            <span>Телефон</span>
+            <input name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+7 (___) ___-__-__">
+          </label>
+          <label class="field">
+            <span>Услуга</span>
+            <select name="service" data-slot="service-options"></select>
+          </label>
+          <label class="field">
+            <span>Комментарий <em>необязательно</em></span>
+            <textarea name="comment" rows="3" placeholder="Например: кухня 3,5 м, нужен проект до конца месяца"></textarea>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="agree" required checked>
+            <span>Согласен на обработку персональных данных</span>
+          </label>
+          <button class="btn btn--accent btn--block" type="submit">Отправить заявку</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="section section--brand section--flush" id="contacts">
+      <div class="contacts">
+        <div class="contacts__info wrap-half">
+          <h2>Контакты</h2>
+          <dl class="contacts__list" data-slot="contacts"></dl>
+          <div class="hero__cta">
+            <a class="btn btn--accent" href="#booking">Замер бесплатно</a>
+            <a class="btn btn--ghost" data-slot="map-link" target="_blank" rel="noopener">Открыть в 2GIS</a>
+          </div>
+        </div>
+        <div class="contacts__map" data-slot="map"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="logo logo--light" href="#top" data-slot="logo"></a>
+        <p class="footer__muted" data-slot="footer-about"></p>
+      </div>
+      <nav class="footer__nav" aria-label="Разделы в подвале">
+        <a href="#services">Услуги</a>
+        <a href="#doctors">Работы</a>
+        <a href="#prices">Цены</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <div class="footer__contacts" data-slot="footer-contacts"></div>
+    </div>
+    <div class="wrap footer__bottom">
+      <p data-slot="copyright"></p>
+      <p>Имеются противопоказания. Необходима консультация специалиста.</p>
+    </div>
+  </footer>
+
+  <!-- Мобильная панель записи -->
+  <div class="mobilebar">
+    <a class="btn btn--wa" data-slot="wa-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg>WhatsApp
+    </a>
+    <a class="btn btn--accent" href="#booking">Замер бесплатно</a>
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.93-4.66-4.11-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.28.25-.27.54-.34.72-.34h.52c.17 0 .4-.06.62.47.23.54.77 1.87.84 2 .07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.7 1.16 1.51 1.88 1.04.93 1.91 1.21 2.18 1.35.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></symbol>
+  </svg>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
